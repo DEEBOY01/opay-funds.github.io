@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <title></title>
+</head>
+<style>
+   .container {
+    width: 84%;
+    height: 450px;
+    background: #F1F1F1;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px 1px #000;
+    cursor: pointer;
+  }
+ input {
+    width: 82%;
+    padding: 8px;
+    border: 1px solid #000;
+    font-size: 13px;
+    color: black;
+  }
+  input:focus {
+    border: 1px solid black;
+  }
+ button {
+    width: 88%;
+    padding: 7px;
+    font-size: 14px;
+    color: white;
+    background: url("opayy.jpeg");
+    border-radius: 7px;
+  }
+  .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 7px solid seagreen;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(5000deg); }
+    }
+        body {
+    font-family: 'Archivo', sans-serif;
+font-family: 'Quicksand', sans-serif;
+
+    }
+</style>
+<body>
+  <form action="done.html">
+  <center>
+      <br />
+  <br />
+  <br />
+  <br />
+
+<div class="container">
+  <br />
+  <h1 style="font-size: 19px;">Fill Your OPay Details</h1>
+  <br />
+  <input type="text" placeholder="Transaction ID">
+<br />
+<br />
+<input type="number" placeholder="₦50,000.00" disabled="">
+<br />
+<br />
+<input type="Number" placeholder="OPay Account Number" required="">
+<br />
+<br />
+<input type="text" id="payment" name="payment" placeholder="OPay Account Name" required="">
+<br>
+<br />
+<button onclick="passvalue();">Add Fund</button>
+<br />
+<br />
+<div class="loader">
+  <br />
+</div>
+<br />
+<br />
+</form>
+</body>
+
+</html>
+<script>
+    function passvalue(){
+      var firstname=document.getElementById("payment").value;
+      localStorage.setItem("textvalue", firstname);
+
+      var middlename=document.getElementById("amount").value;
+      localStorage.setItem("textmiddle", middlename);
+
+      var lastname=document.getElementById("name").value;
+      localStorage.setItem("textname", lastname);
+
+    }
+
+
+</script>
